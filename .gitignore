@@ -1,0 +1,19 @@
+# Ignore system and IDE files
+.DS_Store
+.Trash/
+Public/
+
+# Ignore virtual environments
+project_env/
+airflow_env/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore personal and document files
+*.docx
+*.pdf
+*.png
+*.csv
