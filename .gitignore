@@ -4,7 +4,6 @@
 Public/
 
 # Ignore virtual environments
-project_env/
 airflow_env/
 
 # Ignore compiled Python files
@@ -12,8 +11,6 @@ airflow_env/
 *.pyo
 __pycache__/
 
-# Ignore personal and document files
+# Ignore personal files
 *.docx
-*.pdf
-*.png
-*.csv
+

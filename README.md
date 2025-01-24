@@ -31,9 +31,11 @@ This project implements a **complete end-to-end data pipeline** using **Apache S
 
 ---
 
-## **📌 Step 1: Load & Explore Dataset**
+## **Step-by-Step Implementation**
 
-### **Load Dataset**
+### **📌 Step 1: Load & Explore Dataset**
+
+#### **Load Dataset**
 - Load `Cricket_Dataset_Players.csv` using Pandas.
 - Clean the dataset by handling missing values and renaming columns.
 - Save the cleaned dataset as `cleaned_cricket_data.csv`.
@@ -43,9 +45,9 @@ This project implements a **complete end-to-end data pipeline** using **Apache S
 
 ---
 
-## **📌 Step 2: Load Data into PostgreSQL**
+### **📌 Step 2: Load Data into PostgreSQL**
 
-### **Create and Populate the Table**
+#### **Create and Populate the Table**
 - Create a PostgreSQL database `cricket_db`.
 
 ```sql
@@ -69,9 +71,9 @@ VALUES (%s, %s, %s, %s)
 
 ---
 
-## **📌 Step 3: Process Data Using Apache Spark**
+### **📌 Step 3: Process Data Using Apache Spark**
 
-### **Transform Data**
+#### **Transform Data**
 - Load `cleaned_cricket_data.csv` using Spark.
 - Compute additional metrics like `strike_rate`.
 - Save the transformed dataset as `processed_cricket_data.csv`.
@@ -87,9 +89,9 @@ df.write.csv("processed_cricket_data.csv", header=True, mode="overwrite")
 
 ---
 
-## **📌 Step 4: Automate ETL with Apache Airflow**
+### **📌 Step 4: Automate ETL with Apache Airflow**
 
-### **Automate the Workflow**
+#### **Automate the Workflow**
 - Airflow DAG automates the ETL process.
 - Tasks: **Extract → Transform → Load**.
 
@@ -106,9 +108,9 @@ extract_task >> transform_task >> load_task
 
 ---
 
-## **📌 Step 5: Train Machine Learning Model**
+### **📌 Step 5: Train Machine Learning Model**
 
-### **Train Model Using Scikit-learn**
+#### **Train Model Using Scikit-learn**
 - Train a **Linear Regression** model to predict batting averages.
 
 ```python
@@ -121,9 +123,9 @@ model.fit(X_train, y_train)
 
 ---
 
-## **📌 Step 6: Visualize Insights**
+### **📌 Step 6: Visualize Insights**
 
-### **Generate Plots**
+#### **Generate Plots**
 - Use **Matplotlib & Seaborn** for data visualization.
 
 ```python
@@ -146,9 +148,9 @@ plt.show()
 
 ---
 
-## **📌 Step 7: Deploy & Schedule with Airflow**
+### **📌 Step 7: Deploy & Schedule with Airflow**
 
-### **Deploy DAG for Scheduled Execution**
+#### **Deploy DAG for Scheduled Execution**
 - Airflow schedules automated execution of ETL and ML tasks.
 - DAG ensures seamless pipeline execution and monitoring.
 
@@ -171,7 +173,7 @@ This project demonstrates a complete **data engineering & machine learning pipel
 - Expand dataset with additional cricket statistics.
 - Implement more advanced ML models.
 - Deploy the model as an API for real-time predictions.
-- **Integrate AWS Cloud** for scalable data processing and automation.
+- Integrate AWS Cloud for scalable data processing and automation.
 
 📊 **Happy Coding!** 🚀
 
